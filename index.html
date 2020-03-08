@@ -20,18 +20,18 @@
              <div id="wrap">
                 <div id="text">
                     <div id="code"> <font color="#FF0000"> <span class="say">亲爱的宝宝</span><br>
-                      <span class="say"> 我希望你节日快乐，</span><br>
-                      <span class="say"> 你就是我最爱的宝宝</span><br>
-                      <span class="say"> 有些东西因为越在乎所以越怕失去</span><br>
-                      <span class="say">因为我太爱你了，所以我害怕失去你</span><br>
-                      <span class="say">希望可以执子之手，与子偕老</span><br>
-                      <span class="say">如果上天让我许三个愿望，</span><br>
-                              <span class="say">第一个是今生今世和你在一起， </span><br>
-                           <span class="say"> 第二个是再生再世和你在一起，</span><br>
-                           <span class="say">第三个是永生永世和你不分离 </span><br>
-                      <span class="say"><span class="space"></span> -- 爱你的老公</span> </font>
-                          <br />
-                          <br />
+                    <span class="say"> 我希望你节日快乐，</span><br>
+                    <span class="say"> 你就是我最爱的宝宝</span><br>
+                    <span class="say"> 有些东西因为越在乎所以越怕失去</span><br>
+                    <span class="say">因为我太爱你了，所以我害怕失去你</span><br>
+                    <span class="say">希望可以执子之手，与子偕老</span><br>
+                    <span class="say">如果上天让我许三个愿望，</span><br>
+                    <span class="say">第一个是今生今世和你在一起， </span><br>
+                    <span class="say"> 第二个是再生再世和你在一起，</span><br>
+                    <span class="say">第三个是永生永世和你不分离 </span><br>
+                    <span class="say"><span class="space"></span> -- 爱你的老公</span> </font>
+                    <br />
+                    <br />
                       </p>
                     </div>
                   </div>
@@ -42,7 +42,7 @@
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
-            <audio src="./file/love.mp3"></audio>
+            <audio src="./file/love.mp3" controls="controls" preload id="music" hidden></audio>
         </div>
     
     <script>
@@ -51,6 +51,7 @@
     <script>
     (function(){
         var canvas = $('#canvas');
+        var music = $('#music');
 		
         if (!canvas[0].getContext) {
             $("#error").show();
@@ -102,6 +103,7 @@
         var hold = 1;
 
         canvas.click(function(e) {
+            music.play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
